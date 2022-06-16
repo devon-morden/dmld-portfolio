@@ -1,1 +1,35 @@
-@charset "utf-8";
+@use "variables" as var;
+
+
+html {
+  font-size: 100%;
+  @media screen and (min-width: var.$large-screen) {
+    font-size: 125%;    
+  }
+}
+
+h2 {
+  font-family: var.$h2-font;
+  font-size: var.$h2-size;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: var.$h3-font;
+  font-size: var.$h3-size;
+  font-weight: 400;
+}
+
+p {
+  font-family: var.$p-font;
+  font-size: var.$p-size;
+  font-weight: 400;
+}
+
+a:link {
+  color: var.$text-color-link;
+}
+
+a:visited {
+  color: var.$text-color-link-visited;
+}
