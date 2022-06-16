@@ -1,0 +1,449 @@
+
+/* Global Settings */
+
+@charset "utf-8";
+
+html {
+	box-sizing: border-box;
+	font-size: 100%
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/* I. Small Screens <640px */
+
+/* gives the body a 4 column layout, each of which will evenly divide extra space, sets the font-family, background, and text color */
+
+body {
+	margin: 0;
+	font-family: Fairplex-wide, sans-serif;
+	background-color: #f8f8f6;
+	color: #000E29;
+}
+
+/* styles the h1 element */
+h1 {
+	font-family: "Trajan-Sans-Pro", sans-serif;
+	font-size: 2.5rem;
+	font-weight: 400;
+	line-height: 2.5rem;
+	padding-top: 0;
+	margin-top: 0;
+	margin-bottom: .5rem;
+	margin-left: 6px;
+	padding-bottom: 0;
+	padding-right: 25px;
+}
+
+/* styles the subheading class */
+.subheading {
+	font-variant: small-caps;
+	font-size: 1.5rem;
+	font-weight: 400;
+	margin-bottom: 0;
+	margin-left: 9px;
+	padding-top: 0px;
+	padding-bottom: 0;
+}
+
+/* I.A.2 section titles */
+
+/* styles the h2 element */
+h2 {
+	font-family: "Trajan-Sans-Pro", sans-serif;
+	font-size: 1.5rem;
+	font-weight: 400;
+	margin-left: 10px;
+	padding-right: 25px;
+}
+
+/* I.A.3. sub-section titles */
+
+/*styles the h3 element*/
+h3 {
+	font-family: "Trajan-Sans-Pro", sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	margin-left: 10px;
+}
+
+/* I.A.4. content */
+
+/*styles all p elements */
+p {
+	font-family: "Fairplex-wide", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	margin-left: 10px;
+	padding-right: 25px;
+	line-height: 1.5rem;
+}
+
+/*styles all list items */
+li {
+	font-family: "Fairplex-wide", sans-serif;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	padding-right: 25px;
+}
+
+/*styles all links*/
+a:link {
+	color: #003cb3;
+}
+
+/*styles all visited links*/
+a:visited {
+	color: #7b00a0;
+}
+
+/*styles all detail elements*/
+details {
+	padding-left: 10px;
+	padding-right: 25px;
+	line-height: 1.5rem;
+	cursor: pointer;
+}
+
+/*styles all description list elements*/
+dl {
+	margin-top: 0px;
+	padding-left: 10px;
+	padding-right: 25px;
+	line-height: 1.5rem;
+}
+
+/*can be added to any element to italicize it*/
+.italic {
+	font-style: italic;
+}
+
+/*can be added to any element to make it single-space*/
+.single-space {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/*works with javascript to create sticky nav*/
+/* .sticky{
+	position: fixed;
+	top: 0;
+} */
+
+
+/* Lays out body */
+body {
+	display: grid;
+	grid-template-columns: repeat(4, 25%);
+	grid-template-rows: auto auto auto auto;
+}
+
+/* header layout */
+header {
+	grid-column: 1 / span 4;
+	grid-row-start: 1;
+	background-color: #a3b69f;
+}
+
+/* nav layout */
+nav {
+	grid-column: 1 / span 4;
+	grid-row-start: 2;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	width: 100vw;
+}
+
+/*Nav Button Normal */
+
+.nav-button {
+	display: flex;
+	font-family: "Fairplex-wide", sans-serif;
+	font-size: 1.5rem;
+	width: 100vw;
+	height: .5 rem;
+	padding-left: 9px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-right: 0px;
+	background-color: #ececeb;
+	color:#000E29;
+  cursor: pointer;
+	border: 0;
+}
+
+/* Nav Button Hover or Click/Tap */
+.nav-button:hover, .nav-button:focus {
+	background-color: #dadada;
+	color:#000E29;
+	inline-size: 100%;
+}
+
+/*Nav Button Icon */
+.fa-bars {
+	padding-top: 3px;
+}
+
+/*Space between button & list items */
+.horizontal-line {
+	width: 100%;
+	height: 1px;
+}
+
+/* Nav ul Normal for some reason this class has to be included *shrug* */
+.nav-content {
+	display: none;
+	text-align: left;
+	list-style: none;
+	margin-top: 0;
+	flex-basis: 100%;
+}
+
+/*sets the width of the nav-content */
+#main-nav-content {
+	width: 100%;
+}
+
+/* Hids the link for whatever page the user is currently on */
+#main-nav-content .this-page {
+	display: none;
+}
+
+/*adds hover color to links*/
+.nav-content a:hover {
+	background-color: #ececeb;
+	flex-basis: 100%;
+}
+
+/* what the user sees when the nav button is clicked */
+.show {
+	display:flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-right: 0px;
+}
+
+/*removes awkward padding*/
+#main-nav-content li {
+	display:flex;
+	padding-right: 0;
+}
+
+/*makes the links not look link-ish*/
+#main-nav-content li a {
+  color: #000E29;
+  padding: 5px;
+	line-height: 2rem;
+  text-decoration: none;
+  font-size: 1.25rem;
+	margin-left: 15px;
+	margin-right: 0px;
+}
+
+/*gives the layout of the main section*/
+main {
+	grid-column: 1 / span 4;
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	grid-template-rows: repeat(2, auto)
+}
+
+/*the jumplinks don't display on small screens */
+aside {
+	display: none;
+}
+
+/*footer position & color*/
+footer {
+	grid-column: 1 / span 4;
+	background-color: #f3f3f1;
+}
+
+#footer-flex-container {
+	display: flex
+}
+
+/* I.C. Content */
+
+/* I.C.1 About Me */
+#about-me {
+	grid-column: 1 / span 4;
+	grid-row-start: 1;
+	display: block;
+	padding-right: 0;
+}
+
+#about-me > h2 {
+	padding-right: 0;
+}
+
+#portrait {
+	float: right;
+	width: 33%;
+	min-width: 150px;
+	max-width: 250px;
+	height: auto;
+	margin-left: 1rem;
+	padding-right: 1.5rem;
+}
+
+/* I.C.2 Relevant Skills & Experience */
+
+#rel-skills-exp {
+	grid-column: 1 / span 4;
+	grid-row-start: 2;
+}
+
+#relevant-experience {
+	padding-bottom: 0px;
+}
+
+#curriculum-vitae {
+	padding-top: 0px;
+}
+
+/* II. Medium Screens */
+
+@media only screen and (min-width: 641px){
+
+}
+
+@media only screen and (min-width: 1300px){
+
+	html {
+		font-size: 125%;
+	}
+
+	body {
+		grid-template-areas: 
+			'header header header header'
+			'nav nav nav nav'
+			'aside main main main'
+			'footer footer footer footer';
+		grid-template-columns: 15% repeat(2, 1fr) 8%;
+		grid-template-rows: 120px 50px auto auto;
+		grid-gap: 0px;
+	}
+
+	header {
+		grid-area: header;
+		display: grid;
+		grid-template-columns: 15% repeat(2, 1fr) 8%;
+		background-color: #a3b69f;
+	}
+
+	#header-grid-container {
+		grid-column-start: 2;
+	}
+
+	nav {
+		grid-area: nav;
+		display: grid;
+		grid-template-columns: 15% repeat(2, 1fr) 8%;
+		background-color: #f3f3f1;
+		box-shadow: 0px 2px 3px 0px #000e293d;
+		position: sticky;
+	}
+
+	.nav-button {
+		display: none;
+	}
+
+	#nav-grid-container {
+		grid-column: 2 / span 2;
+	}
+
+	#main-nav-content{
+		display: flex;
+		justify-content: space-between;
+		padding-left: 0;
+		margin-bottom: 0;
+	}
+
+	#main-nav-content li a{
+		margin-left: 0;
+		padding: 5px;
+	}
+
+	main {
+		grid-area: main;
+		grid-column: 2 / span 2;
+		overflow: auto;
+	}
+
+	#rel-skills-exp {
+		display: grid;
+		grid-template-areas: 
+			'h2 h2'
+			'skills experience';
+		grid-template-columns: 50% 50%;;
+	}
+
+	#relevant-experience {
+		grid-area: h2;
+	}
+
+	#relevant-experience h2{
+		margin-bottom: 0;
+	}
+
+	#curriculum-vitae {
+		margin-top: 5px;
+	}
+
+	#skills {
+		grid-area: skills;
+	}
+
+	#experience {
+		grid-area: experience;
+	}
+
+	aside {
+		grid-area: aside;
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		top: 200px;
+		background-color: #f3f3f1;
+		box-shadow: 2px 2px 3px 0px #000e293d;
+	}
+
+	#quick-links h3 {
+		margin-left: 40px;
+		margin-bottom: 0px;
+		padding-right: 20px;
+	}
+
+	#quick-links ul {
+		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	#quick-links li{
+		line-height: 2rem;
+		padding-left: 40px;
+	}
+
+	#quick-links li:hover {
+		background-color: #ececeb;
+		padding-left: 40px;
+		width: 100%;
+	}
+
+	#quick-links a {
+		text-decoration: none;
+		color: #000E29;
+	}
+
+	footer {
+		grid-area: footer;
+	}
+	
+}
