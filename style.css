@@ -313,13 +313,13 @@ footer {
 
 #SDCN {
 	min-width:50px;
-	max-width: 100px;
+	max-width: 300px;
 	padding: 0px 10px;
 }
 
 #SDCN-figure {
 	float: right;
-	width: 120px;
+	width: 300px;
 	margin: 0;
 }
 
